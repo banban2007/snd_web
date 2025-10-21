@@ -167,11 +167,10 @@ export default function Home() {
                     Order #{item.order_number}
                   </p>
                   <p
-                    className={`text-sm font-medium ${
-                      item.status === "complete"
-                        ? "text-green-600"
-                        : "text-amber-600"
-                    }`}
+                    className={`text-sm font-medium ${item.status === "complete"
+                      ? "text-green-600"
+                      : "text-amber-600"
+                      }`}
                   >
                     {item.status}
                   </p>
@@ -197,37 +196,41 @@ export default function Home() {
         </div>
 
         {/* Product List */}
-        <div className="py-4">
-          <div className="flex justify-between items-center mb-3">
-            <h2 className="text-xl font-bold">Products</h2>
+        <div class="py-4">
+          <div class="flex justify-between items-center mb-3">
+            <h2 class="text-xl font-bold">Products</h2>
           </div>
 
-          <div className="space-y-3 max-h-80 overflow-y-scroll overflow-hidden">
+          <div class="space-y-3 max-h-80 overflow-y-scroll overflow-hidden">
             {products.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white p-4 rounded-2xl flex items-center space-x-4 shadow-md border border-slate-200"
-              >
+              <div key={index} class="bg-white p-4 rounded-2xl flex items-center space-x-4 shadow-md border border-slate-200">
                 <img
-                  src={item.image}
+                  src={`${item.image}`}
                   alt={item.name}
-                  className="w-16 h-16 bg-white p-1 rounded-lg object-cover"
+                  class="w-13 h-15 bg-white p-1 rounded-lg object-cover"
                 />
-                <div className="flex-1">
-                  <p className="font-bold text-slate-900">{item.name}</p>
+                <div class="flex-1">
+                  <p class="font-bold text-slate-900">{item.name}</p>
                 </div>
-                <div className="flex flex-col items-end gap-1">
-                  <div className="text-green-400 text-sm">
-                    MMK {item.preorder_price}
+
+                <div class="flex flex-col items-end">
+                  <div class="flex items-center gap-4">
+
+                    <div class="flex flex-col items-end">
+                      <span class="text-green-400 text-sm">MMK {item.preorder_price}</span>
+                      <span class="text-xs text-gray-500 font-medium">Pre-order price</span>
+                    </div>
+                    <div class="flex flex-col items-end">
+                      <span class="text-green-400 text-sm">MMK {item.price}</span>
+                      <span class="text-xs text-gray-500 font-medium">Normal price</span>
+                    </div>
+
+
                   </div>
-                  <span className="text-xs text-gray-500">Pre-order price</span>
-                  <div className="text-green-400 text-sm">
-                    MMK {item.price}
-                  </div>
-                  <span className="text-xs text-gray-500">Normal price</span>
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </div>
