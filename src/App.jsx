@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Profile from "./pages/Profile";
 import EditProfile from "./pages/EditProfile";
 import Register from "./pages/Register";
+import Email from "./pages/Email";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/profile/edit/:id" element={<EditProfile />} />
 
         <Route path="/register" element={<Register />} />
+        <Route path="/email" element={<Email />} />
       </Routes>
       <Header />
     </Router>
