@@ -106,7 +106,7 @@ export default function Payment() {
                         </button>
 
                         {/* COD */}
-                        <button type="submit" onClick={() => router.push("/tracking")}
+                        <button type="submit" onClick={() => navigate("/tracking")}
                             className="w-full flex justify-between items-center bg-gray-50 hover:bg-[#eeee] p-5 rounded-xl border border-gray-300 shadow-sm transition duration-200"
                         >
 

@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
-/* * Pagination Bullets */ 
-.swiper-pagination-bullet { 
+
+/* * Pagination Bullets */
+.swiper-pagination-bullet {
     width: 12px !important;
     height: 6px !important;
     background-color: rgba(9, 9, 9, 0.6) !important;
@@ -44,4 +45,28 @@
 /* Styling for the text inside for closer resemblance */
 .custom-border-box p {
     margin: 5px 0;
+}
+
+/* Invoice Css */
+/* ✅ Correct version (no JS import) */
+.invoice-container {
+  border-left: 8px solid #b30602;
+}
+
+.logo-area {
+  position: relative;
+  min-height: 8rem;
+}
+
+.logo-graphic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/logo.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 0;
 }

@@ -28,10 +28,8 @@ export default function Profile() {
     navigate("/login");
   };
 
-  if (loading) return <p>Loading user detail...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
-  if (!user) return <p>Loading...</p>;
-
+ 
   return (
     <div className="flex flex-col items-center justify-center py-10 px-4">
       <div className="w-full text-center">

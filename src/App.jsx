@@ -16,6 +16,8 @@ import Product from "./pages/Product";
 import Delivery from "./pages/Delivery";
 import PaymentType from "./pages/Payment_Type";
 import Payment from "./pages/Payment";
+import Tracking from "./pages/Tracking";
+import Invoice from "./pages/Invoice";
 
 
 const App = () => {
@@ -39,6 +41,8 @@ const App = () => {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/payment_type" element={<PaymentType />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/tracking" element={<Tracking />} />
+        <Route path="/invoice" element={<Invoice />} />
       </Routes>
       <Header />
     </Router>
