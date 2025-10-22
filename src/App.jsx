@@ -20,7 +20,7 @@ import Tracking from "./pages/Tracking";
 import Invoice from "./pages/Invoice";
 
 const App = () => {
-  const token = localStorage.getItem("token"); // check token once
+  const token = localStorage.getItem("token");
 
   return (
     <Router>
