@@ -138,7 +138,7 @@ export default function Login() {
               and{" "}
               <Link
                 className="group text-blue-400 relative inline-block"
-                to="#"
+                to={'/privacy'}
               >
                 <span className="relative z-10">Privacy Policy</span>
                 <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>

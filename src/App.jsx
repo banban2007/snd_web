@@ -45,6 +45,7 @@ const App = () => {
         <Route path="/payment" element={token ? <Payment /> : <Navigate to="/login" replace />} />
         <Route path="/tracking" element={token ? <Tracking /> : <Navigate to="/login" replace />} />
         <Route path="/invoice" element={token ? <Invoice /> : <Navigate to="/login" replace />} />
+        <Route path="/privacy" element={token ? <Privacy /> : <Navigate to="/login" replace />} />
 
         {/* Catch all unknown routes */}
         <Route path="*" element={<Navigate to={token ? "/" : "/login"} replace />} />
