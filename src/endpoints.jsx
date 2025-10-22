@@ -52,6 +52,7 @@ export const ENDPOINT = {
   // Order Histroy 
 
   USER_ORDER_HISTORY: `${API_BASE_URL}/order/user/history/`,
+  ORDER_CREATE : `${API_BASE_URL}/order/create/`
 
 
 };

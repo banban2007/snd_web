@@ -15,12 +15,13 @@ const Delivery = () => {
         setDelivery({ ...delivery, [name]: value });
     };
 
-    const goToPaymentType = () => {
-        const data = JSON.parse(localStorage.getItem("orderdata"));
-        const newData = { ...data, delivery };
-        localStorage.setItem("orderdata", JSON.stringify(newData));
-        navigate("/payment_type");
-    };
+const goToPaymentType = () => {
+    const data = JSON.parse(localStorage.getItem("orderdata")) || {};
+    const newData = { ...data, delivery };
+    localStorage.setItem("orderdata", JSON.stringify(newData));
+    navigate("/payment_type");
+};
+
 
     const goBack = () => {
         window.history.back();

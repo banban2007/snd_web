@@ -132,11 +132,16 @@ const Product = () => {
         const slo = location.find((loc) => loc.id === selectedLocation);
 
         const orderData = {
-            cementtype: orderType,
-            product: sp,
+            
+            order_type: orderType,        
+            product: sp,             
+            product_id: sp?.id || selectedProduct, 
             labour: sl,
-            day: sd,
+            labour_id: sl?.id || selectedLabour,
+            days: sd,                     
+            days_id: sd?.id || selectedDay,
             location: slo,
+            location_id: slo?.id || selectedLocation,
             product_quantity: quantity,
             subtotal: subtotal,
         };
@@ -307,8 +312,8 @@ const Product = () => {
                             !selectedProduct || !quantity || !selectedDay || !selectedLocation
                         }
                         className={`w-full py-3 rounded-xl font-semibold text-white ${!selectedProduct || !quantity || !selectedDay || !selectedLocation
-                                ? "bg-gray-200 cursor-not-allowed"
-                                : "bg-[#B30602] hover:bg-[#b30502dc]"
+                            ? "bg-gray-200 cursor-not-allowed"
+                            : "bg-[#B30602] hover:bg-[#b30502dc]"
                             }`}
                     >
                         Next: Choose Delivery
