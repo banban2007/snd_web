@@ -1,1 +1,47 @@
 @import "tailwindcss";
+
+/* * Pagination Bullets */ 
+.swiper-pagination-bullet { 
+    width: 12px !important;
+    height: 6px !important;
+    background-color: rgba(9, 9, 9, 0.6) !important;
+    border-radius: 2px !important;
+    margin: 0 5px !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+}
+
+/* Active Bullet */
+.swiper-pagination-bullet-active {
+    background-color: #000000 !important;
+    /* black */
+    opacity: 1 !important;
+}
+
+.custom-border-box {
+    /* Sets the inner padding around the text */
+    padding: 20px;
+    /* Defines the solid border with rounded corners */
+    border: 3px solid #E60000;
+    /* Primary red color for the main border */
+    border-radius: 15px;
+    /* Adjust for desired roundness */
+    /* Overrides the top border to make it thicker */
+    border-top: 10px solid #E60000;
+    /* Thicker red top border */
+    /* Adds a subtle shadow for a slightly lifted look (optional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sets the background color (usually white for text content) */
+    background-color: #ffffff;
+    margin: 20px auto;
+    /* Centers the box on the page */
+    /* Ensures the text inside is visible */
+    color: #000000;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Styling for the text inside for closer resemblance */
+.custom-border-box p {
+    margin: 5px 0;
+}

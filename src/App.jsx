@@ -9,6 +9,13 @@ import Profile from "./pages/Profile";
 import EditProfile from "./pages/EditProfile";
 import Register from "./pages/Register";
 import Email from "./pages/Email";
+import ResetPassword from "./pages/ResetPassword";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Product from "./pages/Product";
+import Delivery from "./pages/Delivery";
+import PaymentType from "./pages/Payment_Type";
+import Payment from "./pages/Payment";
 
 
 const App = () => {
@@ -24,6 +31,14 @@ const App = () => {
 
         <Route path="/register" element={<Register />} />
         <Route path="/email" element={<Email />} />
+        <Route path="/forgot" element={<ResetPassword />} />
+
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/payment_type" element={<PaymentType />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Header />
     </Router>
